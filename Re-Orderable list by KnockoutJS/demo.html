@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Re-orderable List</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type='text/javascript' src="knockout-3.4.0.js"></script>
+</head>
+<body>
+    <div class="listBox" id="listKO">
+        <!-- ko foreach: planets-->
+        <div class="borderlist">
+            <div class="floatLeft" ><img src="li-icon.png" /> <div class="textOverflow" data-bind="text: planetName">Test</div> </div> 
+            <span class="floatRight" style="display:inline-block">
+                <i id="listDown" class="fa fa-angle-double-down" style="font-size:24px;padding-right:3px" data-bind="click: $root.itemOrderDown, style: {display:  $root.yesOrNo(down) ? 'inline' : 'none' }"></i>
+                <i id="listUp" class="fa fa-angle-double-up" style="font-size:24px;padding-right:3px" data-bind="click: $root.itemOrderUp, style: {display:  $root.yesOrNo(up) ? 'inline' : 'none' }"></i>
+                <i class="fa fa-close" style="font-size:24px;padding-right:3px" data-bind="click: $root.removeItem"></i>
+            </span>
+        </div>
+        <!-- /ko -->
+    </div>
+    <script type='text/javascript' src="demo.js"></script>
+</body>
+</html>
