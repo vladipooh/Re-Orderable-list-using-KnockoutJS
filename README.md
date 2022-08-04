@@ -1,5 +1,4 @@
-# Mini-Project
-Re-Orderable list by KnockoutJS
+# Re-Orderable list using KnockoutJS
 
 Using KnockoutJS for interactive list which can be:
 - re-order
